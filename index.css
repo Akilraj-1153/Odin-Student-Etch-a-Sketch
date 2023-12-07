@@ -1,17 +1,18 @@
 body{
-    background-color: chocolate;
+    background-color: rgb(65, 11, 44);
 }
 
 .Game{
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
 }
 #bigbox{
     background-color: white;
     border: 1px solid black;
-    height: 700px;
-    width: 700px;
+    height: 650px;
+    width: 650px;
     display: flex;
     
 }
+

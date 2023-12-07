@@ -1,37 +1,56 @@
 document.addEventListener('DOMContentLoaded', function () {
-
     const Container = document.getElementById('bigbox');
-    const Colorip = document.createElement('input');
+    const colorip = document.createElement('input');
     const colorselect = document.getElementById('ipcolor');
-    Colorip.setAttribute('type', 'color');
-    colorselect.appendChild(Colorip);
-    const ipboxcount=document.createElement('input');
-    ipboxcount.setAttribute('type','range');
+    colorip.setAttribute('type', 'color');
+    colorselect.appendChild(colorip);
+
+    const ipboxcount = document.createElement('input');
+    const ipgridrange = document.getElementById('ipgridsize');
+    ipboxcount.setAttribute('type', 'range');
+    ipboxcount.setAttribute('id', 'iprange');
+    ipboxcount.setAttribute('min', 1);
+    ipboxcount.setAttribute('max', 64);
+    ipboxcount.setAttribute('step', 1);
+    ipgridrange.appendChild(ipboxcount);
+
+    const value = document.querySelector("#value");
+    const inputrange = document.querySelector("#iprange");
+    value.textContent = inputrange.value;
+    inputrange.addEventListener("input", (event) => {
+    value.textContent = event.target.value;
+    });
+
+    const newgame=document.getElementById('newgame');
+    newgame.addEventListener('click',()=>{
+        generategrid(ipboxcount.value);
+    });
+
     
 
+    function generategrid(n) {
+        Container.innerHTML = '';
+        for (let i = 1; i <= n * n; i++) {
+            const cell = document.createElement('div');
+            cell.classList.add('smallbox');
+            Container.appendChild(cell);
 
-    for (let i = 1; i <= n * n; i++) {
-        const Cell = document.createElement('div');
-        Cell.classList.add('smallbox');
-        Container.appendChild(Cell);
+            const percentage = 100 / n;
+            Container.style.flex = `1 0 ${percentage}%`;
+            Container.style.maxHeight = '650px';
+            Container.style.maxWidth = '650px';
+            Container.style.flexWrap = 'wrap';
 
-        const percentage = 100 / n;
-        Container.style.flex = `1 0 ${percentage}%`;
-        Container.style.maxHeight = '650px';
-        Container.style.maxWidth = '650px';
-        Container.style.flexWrap = 'wrap';
+            cell.style.flex = `1 0 ${percentage}%`;
+            cell.style.maxHeight = `${percentage}%`;
+            cell.style.maxWidth = `${percentage}%`;
+            cell.style.border = '1px solid black';
+            cell.style.boxSizing = 'border-box';
 
-        Cell.style.flex = `1 0 ${percentage}%`;
-        Cell.style.maxHeight = `${percentage}%`;
-        Cell.style.maxWidth = `${percentage}%`;
-        Cell.style.border = '1px solid black';
-        Cell.style.boxSizing = 'border-box';
-
-        Cell.addEventListener('mouseover', () => {
-            Cell.style.backgroundColor = Colorip.value;
-        });
+            cell.addEventListener('mouseover', () => {
+                cell.style.backgroundColor = colorip.value;
+            });
+        }
     }
-
-   
 });
-var n = 2; 
+

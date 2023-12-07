@@ -10,11 +10,12 @@
 <body>
     <h1 style="text-align: center; margin-top:-10px ;">Etch-a-Sketch Color Game by <a href="https://github.com/Akilraj-1153">AKIL</a></h1>
     <div class="Game">
-        <div>
-            <h2 id="ipcolor">Select Color:</h2>
-            <!-- <input type="color"/> -->
-            <h2>Erase the Color:<button>ERASE</button></h2>
-            <h2 id="Reset">Reset:<button>Reset all and Start the new Game</button></h2>
+        <div id="userInput">
+            <h2 id="ipgridsize">SELECT THE NUMBER OF GRID : <span id="value"> 0 </span></h2>
+            <h2 id="ipcolor">SELECT THE COLOR : </h2>
+            <h2>ERASE THE COLOR : <button id="eraser">ERASE</button></h2>
+            <button id="newgame">START THE GAME</button>
+            <h2 id="Reset">RESET EVERYTHING : <button>RESET</button></h2>
         </div>
         <div id="bigbox"></div>
     </div>
