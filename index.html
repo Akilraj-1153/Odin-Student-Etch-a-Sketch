@@ -8,16 +8,44 @@
     <script src="index.js"></script>
 </head>
 <body>
-    <h1 style="text-align: center; margin-top:-10px ;">Etch-a-Sketch Color Game by <a href="https://github.com/Akilraj-1153">AKIL</a></h1>
     <div class="Game">
         <div id="userInput">
-            <h2 id="ipgridsize">SELECT THE NUMBER OF GRID : <span id="value"> 0 </span></h2>
-            <h2 id="ipcolor">SELECT THE COLOR : </h2>
-            <h2 style="display: flex; gap: 5px;">ERASE THE COLOR : <button id="eraser">ERASE</button><button id="fulleraser">ERASE ALL COLOR</button></h2>
+            <h1 style="text-align: center; margin-top: -1px;">Etch-a-Sketch Color Game by <a href="https://github.com/Akilraj-1153">AKIL</a></h1>
+            <div class="instructions">
+                <p>The instructions to play the Etch-a-Sketch Color Game</p>
+    
+                <h4>1.Grid Size Selection:</h4>
+                <ul>
+                    <li>Use the "SELECT THE NUMBER OF GRID" slider to choose the size of the grid.</li>
+                </ul>
+                    
+                <h4>2.Color Selection:</h4>
+                <ul>
+                    <li>Use the "SELECT THE COLOR" color picker to choose the drawing color.</li>
+                </ul>
+
+                <h4>3. Drawing:</h4>
+                <ul>
+                    <li>Click "START THE GAME" to generate the grid and start drawing.</li>
+                    <li>Move your cursor over the grid cells to draw with the selected color.</li>
+                    <li>Click "ERASE" to remove color from cells.</li>
+                    <li>Use "ERASE ALL COLOR" to clear the entire grid Color.</li>
+                </ul>
+    
+                <h4>4. Reset:</h4>
+                <ul>
+                    <li>Click "RESET" to reload the page, clearing the grid and resetting settings.</li>
+                </ul>
+            </div>
+    
+            <h3 id="ipgridsize">SELECT THE NUMBER OF GRID : <span id="value"> 0 </span></h3>
+            <h3 id="ipcolor">SELECT THE COLOR : </h3>
             <button id="newgame">START THE GAME</button>
-            <h2 >RESET EVERYTHING : <button id="Reset">RESET</button></h2>
+            <h3 style="display: flex; gap: 5px;">ERASE THE COLOR : <button id="eraser">ERASE</button><button id="fulleraser">ERASE ALL COLOR</button></h3>  
+            <h3>RESET EVERYTHING : <button id="Reset">RESET</button></h3>
         </div>
-        <div id="bigbox"></div>
+        <div id="bigbox">
+        </div>
     </div>
 </body>
 </html>

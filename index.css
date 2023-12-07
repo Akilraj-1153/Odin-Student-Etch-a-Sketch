@@ -1,30 +1,55 @@
-body{
+body {
     background-image: url('colors.jpg');
     background-size: cover;
     backdrop-filter: blur(5px);
     height: 100vh;
-
+    margin: 0;
+    padding: 0;
 }
 
-h2,button,span,h1{
-    font-family:cursive ;
+h2, h3,p,ul,li,button, span,div {
+    font-family: cursive;
+    
 }
-.Game{
+
+.Game {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:100px;
+    gap: 100px;
 }
-#bigbox{
+
+#bigbox {
     background-color: white;
     border: 5px solid black;
     height: 650px;
     width: 650px;
-    display: flex; 
+    display: flex;
 }
-button{
+
+button {
     height: 30px;
     width: fit-content;
     border-radius: 10px;
+    cursor: pointer;
+    background-color: #3498db; 
+    color: white;
+    border: none;
+    margin: 5px;
+    padding: 5px 10px;
 }
 
+button:hover {
+    background-color: #2980b9; 
+}
+#color{
+    background-color: transparent;
+    border: none;
+    height: 40px;
+    width: 40px;
+}
+
+.instructions{
+    width: 600px;
+    font-size: 14px;
+}

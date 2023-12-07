@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const colorip = document.createElement('input');
     const colorselect = document.getElementById('ipcolor');
     colorip.setAttribute('type', 'color');
+    colorip.setAttribute('id', 'color');
     colorselect.appendChild(colorip);
 
     const ipboxcount = document.createElement('input');
