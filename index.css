@@ -1,5 +1,6 @@
 body {
-    background-image: url('colors.jpg');
+    
+    background-image: url('BGimage.jpg');
     background-size: cover;
     backdrop-filter: blur(5px);
     height: 100vh;
