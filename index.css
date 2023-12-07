@@ -1,18 +1,30 @@
 body{
-    background-color: rgb(65, 11, 44);
+    background-image: url('colors.jpg');
+    background-size: cover;
+    backdrop-filter: blur(5px);
+    height: 100vh;
+
 }
 
+h2,button,span,h1{
+    font-family:cursive ;
+}
 .Game{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap:100px;
 }
 #bigbox{
     background-color: white;
-    border: 1px solid black;
+    border: 5px solid black;
     height: 650px;
     width: 650px;
-    display: flex;
-    
+    display: flex; 
+}
+button{
+    height: 30px;
+    width: fit-content;
+    border-radius: 10px;
 }
 
